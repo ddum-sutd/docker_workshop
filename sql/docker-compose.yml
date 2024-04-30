@@ -1,0 +1,12 @@
+version: "2"
+services:
+    mysql-development:
+        container_name: studentdb_container
+        image: mysql:8.0.17
+        ports:
+          - "3307:3306"
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: student_db
+        volumes:
+          - ./init.sql:/docker-entrypoint-initdb.d/init.sql
