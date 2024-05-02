@@ -4,8 +4,8 @@ WORKDIR /app
 
 ADD . /app
 
-RUN pip install --no-cache-dir Flask
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 6000
 
 CMD ["python", "app.py"]
