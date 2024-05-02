@@ -1,0 +1,25 @@
+GET 
+http://127.0.0.1:5000/student
+
+POST
+http://127.0.0.1:5000/student
+JSON Body to pass
+{
+    "name": "priya",
+    "age": 50,
+    "school": "sutd"
+}
+
+
+PUT
+http://127.0.0.1:5000/student/1
+JSON Body to pass
+{
+	"id": 1,
+    "name": "Bel",
+    "age": 50,
+    "school": "sutd"
+}
+
+DELETE
+http://127.0.0.1:5000/student/1

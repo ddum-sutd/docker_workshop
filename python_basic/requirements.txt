@@ -1,1 +1,1 @@
-Flask
+lorem-text==2.1
