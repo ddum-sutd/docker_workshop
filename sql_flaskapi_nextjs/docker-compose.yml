@@ -18,4 +18,12 @@ services:
       - "5000:5000"
     depends_on:
       - db
+  next-app:
+    build: ./next-app
+    links:
+      - app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
       

@@ -1,0 +1,12 @@
+-- Read Data
+SELECT * FROM employee;
+SELECT * FROM employee WHERE id = 1;
+
+-- Insert Data
+INSERT INTO employee (name, age) VALUES ('tan', 20);
+
+-- Update Data
+UPDATE employee SET name = 'xi', age = 30 WHERE id = 1;
+
+-- Delete Data
+DELETE FROM employee WHERE id = 1;

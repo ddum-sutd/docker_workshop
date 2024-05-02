@@ -1,9 +1,21 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import mysql.connector
 from mysql.connector import pooling
 import os
+#from fastapi import FastAPI
+#from fastapi.middleware.cors import CORSMiddleware
 
 app = Flask(__name__)
+
+cors = CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:3000",  # Add the origin of your Next.js application
+    "http://next-app:3000",
+    # Add any additional origins as needed
+]}}, methods=["GET", "POST", "PUT", "DELETE"],
+            allow_headers=["Content-Type", "Authorization"],
+            supports_credentials=True)
+
 
 # Function to get a sql connection
 def get_mysql_connection():
