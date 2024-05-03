@@ -1,5 +1,8 @@
 version: "2"
+
+# Defines the services to be created and managed by Docker Compose.
 services:
+    ## Defines the configuration for the database service.
     mysql-development:
         container_name: employeedb_container
         image: mysql:8.0.17

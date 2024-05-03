@@ -1,6 +1,7 @@
 version: "2"
-services:
-  db:
+services:  
+  ## Defines the configuration for the database service.
+  db:          
     container_name: studentdb_container
     image: mysql:5.7
     ports:
@@ -9,7 +10,9 @@ services:
       MYSQL_ROOT_PASSWORD: root_pass
       MYSQL_DATABASE: studentdb
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+
+  ## Defines the configuration for the python application service.
   app:
     build: ./app
     links:
