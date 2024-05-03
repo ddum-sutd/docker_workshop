@@ -1,0 +1,22 @@
+cd C:\Users\Desktop\workshop>
+cd python_basic
+docker build -t first_app .
+docker run first_app 
+cd ..
+
+cd sql
+docker-compose up -d
+docker-compose down
+cd ..
+
+
+cd sql_flaskapi
+docker-compose up -d
+docker-compose down
+cd ..
+
+cd sql_flaskapi_nextjs
+docker-compose up -d
+docker-compose down
+cd ..
+
